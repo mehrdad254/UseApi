@@ -14,14 +14,14 @@ public class Api {
 		System.out.println(getDog());
 	}
 
-	public static String getDog() throws MalformedURLException, IOException{
-        String httpsURL = "https://dog.ceo/api/breeds/image/random";
-        URL myUrl = new URL(httpsURL);
-        HttpsURLConnection conn = (HttpsURLConnection) myUrl.openConnection();
-        conn.setRequestMethod("GET");
-        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        JSONObject json = new JSONObject(in.readLine());
-        String Picture = json.getString("message");
-        return Picture;
-    }
+	public static String getDog() throws MalformedURLException, IOException {
+		String httpsURL = "https://dog.ceo/api/breeds/image/random";
+		URL myUrl = new URL(httpsURL);
+		HttpsURLConnection conn = (HttpsURLConnection) myUrl.openConnection();
+		conn.setRequestMethod("GET");
+		BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		JSONObject json = new JSONObject(in.readLine());
+		String Picture = json.getString("message");
+		return Picture;
+	}
 }
