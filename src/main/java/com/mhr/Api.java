@@ -12,7 +12,6 @@ public class Api {
 
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		System.out.println(getDog());
-		System.out.println("just for test");
 	}
 
 	public static String getDog() throws MalformedURLException, IOException{
